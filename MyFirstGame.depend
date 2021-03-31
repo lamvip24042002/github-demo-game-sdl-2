@@ -1,0 +1,202 @@
+# depslib dependency file v1.0
+1615533184 source:c:\users\lamvi\desktop\myfirstgame\commonfunc.cpp
+	"CommonFunc.h"
+
+1615907393 c:\users\lamvi\desktop\myfirstgame\commonfunc.h
+	<string>
+	<vector>
+	<windows.h>
+	<SDL.h>
+	<SDL_image.h>
+	<SDL_mixer.h>
+	<SDL_ttf.h>
+
+1615891920 source:c:\users\lamvi\desktop\myfirstgame\main.cpp
+	"CommonFunc.h"
+	"BaseObject.h"
+	"game_map.h"
+	"MainObject.h"
+	"impTimer.h"
+	"ThreatsObject.h"
+	"ExplosionObject.h"
+	"GameText.h"
+	"PlayerPower.h"
+	"Geometric.h"
+	"BulletObject.h"
+
+1615458439 source:c:\users\lamvi\desktop\myfirstgame\baseobject.cpp
+	"BaseObject.h"
+
+1614956021 c:\users\lamvi\desktop\myfirstgame\baseobject.h
+	"CommonFunc.h"
+
+1615342394 source:c:\users\lamvi\desktop\myfirstgame\game_map.cpp
+	"game_map.h"
+
+1615110337 c:\users\lamvi\desktop\myfirstgame\game_map.h
+	"CommonFunc.h"
+	"BaseObject.h"
+
+1615907396 c:\users\lamvi\desktop\myfirstgame\mainobject.h
+	<vector>
+	"CommonFunc.h"
+	"BaseObject.h"
+	"BulletObject.h"
+	"PlayerPower.h"
+
+1615956891 source:c:\users\lamvi\desktop\myfirstgame\mainobject.cpp
+	"MainObject.h"
+
+1615344410 source:c:\users\lamvi\desktop\myfirstgame\imptimer.cpp
+	"impTimer.h"
+	"CommonFunc.h"
+
+1615344388 c:\users\lamvi\desktop\myfirstgame\imptimer.h
+
+1615385889 source:c:\users\lamvi\desktop\myfirstgame\bulletopject.cpp
+	"BulletOpject.h"
+
+1615427069 c:\users\lamvi\desktop\myfirstgame\bulletopject.h
+	"CommonFunc.h"
+	"BaseObject.h"
+
+1615713528 source:c:\users\lamvi\desktop\myfirstgame\bulletobject.cpp
+	"BulletObject.h"
+
+1615891898 c:\users\lamvi\desktop\myfirstgame\bulletobject.h
+	"CommonFunc.h"
+	"BaseObject.h"
+
+1615621845 source:c:\users\lamvi\desktop\myfirstgame\theatsobject.cpp
+	"ThreatsObject.h"
+
+1615453673 c:\users\lamvi\desktop\myfirstgame\theatsobject.h
+	"BaseObject.h"
+	"CommonFunc.h"
+
+1615621845 c:\users\lamvi\desktop\myfirstgame\threatsobject.h
+	"BaseObject.h"
+	"CommonFunc.h"
+	"BulletObject.h"
+
+1615536822 source:c:\users\lamvi\desktop\myfirstgame\explosionobject.cpp
+	"ExplosionObject.h"
+
+1615536808 c:\users\lamvi\desktop\myfirstgame\explosionobject.h
+	"CommonFunc.h"
+	"BaseObject.h"
+
+1615542322 source:c:\users\lamvi\desktop\myfirstgame\gametext.cpp
+	"GameText.h"
+
+1615542331 c:\users\lamvi\desktop\myfirstgame\gametext.h
+	"CommonFunc.h"
+
+1615716281 source:c:\users\lamvi\desktop\myfirstgame\playerpower.cpp
+	"PlayerPower.h"
+
+1615556707 c:\users\lamvi\desktop\myfirstgame\playerpower.h
+	"CommonFunc.h"
+	"BaseObject.h"
+
+1615619069 source:c:\users\lamvi\desktop\myfirstgame\geometric.cpp
+	"Geometric.h"
+
+1615619110 c:\users\lamvi\desktop\myfirstgame\geometric.h
+	"CommonFunc.h"
+
+1615458439 source:c:\users\lamvi\desktop\myfirstgame - copy\baseobject.cpp
+	"BaseObject.h"
+
+1614956021 c:\users\lamvi\desktop\myfirstgame - copy\baseobject.h
+	"CommonFunc.h"
+
+1616553516 c:\users\lamvi\desktop\myfirstgame - copy\commonfunc.h
+	<string>
+	<vector>
+	<windows.h>
+	<SDL.h>
+	<SDL_image.h>
+	<SDL_mixer.h>
+	<SDL_ttf.h>
+
+1615533184 source:c:\users\lamvi\desktop\myfirstgame - copy\commonfunc.cpp
+	"CommonFunc.h"
+
+1615536822 source:c:\users\lamvi\desktop\myfirstgame - copy\explosionobject.cpp
+	"ExplosionObject.h"
+
+1615536808 c:\users\lamvi\desktop\myfirstgame - copy\explosionobject.h
+	"CommonFunc.h"
+	"BaseObject.h"
+
+1615342394 source:c:\users\lamvi\desktop\myfirstgame - copy\game_map.cpp
+	"game_map.h"
+
+1615110337 c:\users\lamvi\desktop\myfirstgame - copy\game_map.h
+	"CommonFunc.h"
+	"BaseObject.h"
+
+1615542322 source:c:\users\lamvi\desktop\myfirstgame - copy\gametext.cpp
+	"GameText.h"
+
+1615542331 c:\users\lamvi\desktop\myfirstgame - copy\gametext.h
+	"CommonFunc.h"
+
+1615619069 source:c:\users\lamvi\desktop\myfirstgame - copy\geometric.cpp
+	"Geometric.h"
+
+1615619110 c:\users\lamvi\desktop\myfirstgame - copy\geometric.h
+	"CommonFunc.h"
+
+1615344410 source:c:\users\lamvi\desktop\myfirstgame - copy\imptimer.cpp
+	"impTimer.h"
+	"CommonFunc.h"
+
+1615344388 c:\users\lamvi\desktop\myfirstgame - copy\imptimer.h
+
+1616486792 source:c:\users\lamvi\desktop\myfirstgame - copy\main.cpp
+	"CommonFunc.h"
+	"BaseObject.h"
+	"game_map.h"
+	"MainObject.h"
+	"impTimer.h"
+	"ThreatsObject.h"
+	"ExplosionObject.h"
+	"GameText.h"
+	"PlayerPower.h"
+	"Geometric.h"
+	"BulletObject.h"
+
+1616553552 c:\users\lamvi\desktop\myfirstgame - copy\mainobject.h
+	<vector>
+	"CommonFunc.h"
+	"BaseObject.h"
+	"BulletObject.h"
+	"PlayerPower.h"
+
+1616311748 c:\users\lamvi\desktop\myfirstgame - copy\bulletobject.h
+	"CommonFunc.h"
+	"BaseObject.h"
+
+1616486184 c:\users\lamvi\desktop\myfirstgame - copy\playerpower.h
+	"CommonFunc.h"
+	"BaseObject.h"
+
+1616290263 c:\users\lamvi\desktop\myfirstgame - copy\threatsobject.h
+	"BaseObject.h"
+	"CommonFunc.h"
+	"BulletObject.h"
+
+1615716281 source:c:\users\lamvi\desktop\myfirstgame - copy\playerpower.cpp
+	"PlayerPower.h"
+
+1616290877 source:c:\users\lamvi\desktop\myfirstgame - copy\theatsobject.cpp
+	"ThreatsObject.h"
+
+1616553516 source:c:\users\lamvi\desktop\myfirstgame - copy\mainobject.cpp
+	"MainObject.h"
+
+1616489720 source:c:\users\lamvi\desktop\myfirstgame - copy\bulletobject.cpp
+	"BulletObject.h"
+
