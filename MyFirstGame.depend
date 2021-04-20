@@ -111,7 +111,7 @@
 1614956021 c:\users\lamvi\desktop\myfirstgame - copy\baseobject.h
 	"CommonFunc.h"
 
-1616553516 c:\users\lamvi\desktop\myfirstgame - copy\commonfunc.h
+1617674524 c:\users\lamvi\desktop\myfirstgame - copy\commonfunc.h
 	<string>
 	<vector>
 	<windows.h>
@@ -119,8 +119,10 @@
 	<SDL_image.h>
 	<SDL_mixer.h>
 	<SDL_ttf.h>
+	"GameText.h"
+	"BaseObject.h"
 
-1615533184 source:c:\users\lamvi\desktop\myfirstgame - copy\commonfunc.cpp
+1617675274 source:c:\users\lamvi\desktop\myfirstgame - copy\commonfunc.cpp
 	"CommonFunc.h"
 
 1615536822 source:c:\users\lamvi\desktop\myfirstgame - copy\explosionobject.cpp
@@ -155,7 +157,7 @@
 
 1615344388 c:\users\lamvi\desktop\myfirstgame - copy\imptimer.h
 
-1616486792 source:c:\users\lamvi\desktop\myfirstgame - copy\main.cpp
+1617763663 source:c:\users\lamvi\desktop\myfirstgame - copy\main.cpp
 	"CommonFunc.h"
 	"BaseObject.h"
 	"game_map.h"
@@ -183,7 +185,7 @@
 	"CommonFunc.h"
 	"BaseObject.h"
 
-1616290263 c:\users\lamvi\desktop\myfirstgame - copy\threatsobject.h
+1617763663 c:\users\lamvi\desktop\myfirstgame - copy\threatsobject.h
 	"BaseObject.h"
 	"CommonFunc.h"
 	"BulletObject.h"
@@ -191,7 +193,7 @@
 1615716281 source:c:\users\lamvi\desktop\myfirstgame - copy\playerpower.cpp
 	"PlayerPower.h"
 
-1616290877 source:c:\users\lamvi\desktop\myfirstgame - copy\theatsobject.cpp
+1617763804 source:c:\users\lamvi\desktop\myfirstgame - copy\theatsobject.cpp
 	"ThreatsObject.h"
 
 1616553516 source:c:\users\lamvi\desktop\myfirstgame - copy\mainobject.cpp

@@ -107,7 +107,7 @@ void TheatsObject::DoTheats(Map& map_data)
 
 void TheatsObject::InitTheats()
 {
-     x_val=0;
+            x_val=0;
             y_val=0;
             if(x_pos>256)
             {
@@ -260,7 +260,7 @@ void TheatsObject::InitBullet(BulletOpject* p_bullet,SDL_Renderer* screen)
         {
             p_bullet->set_is_move(true);
             p_bullet->set_bullet_dir(BulletOpject::Dir_Left);
-            p_bullet->SetRect(x_pos+20,y_pos+10);
+            p_bullet->SetRect(x_pos+10,y_pos+15);
             p_bullet->set_x_val(15);
         }
 

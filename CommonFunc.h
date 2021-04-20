@@ -8,6 +8,9 @@
 #include<SDL_image.h>
 #include<SDL_mixer.h>
 #include<SDL_ttf.h>
+#include "GameText.h"
+#include "BaseObject.h"
+
 
 static SDL_Window* g_window=NULL;
 static SDL_Renderer* g_screen=NULL;
@@ -55,6 +58,8 @@ typedef struct Map
  namespace SDLCommonFunc
  {
      bool CheckCollistion(const SDL_Rect& obj1,const SDL_Rect& obj2);
+     int ShowMenu(SDL_Renderer* g_screen, TTF_Font* font, const std::string& menu1, const std::string& menu2,const std::string& img_name);
+
  }
 
 

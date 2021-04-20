@@ -14,6 +14,7 @@
 
 BaseOject g_background;
 TTF_Font* font_time=NULL;
+TTF_Font* g_font_MENU=NULL;
 
 bool InitData()
 {
@@ -53,6 +54,11 @@ bool InitData()
        {
            success=false;
        }
+       g_font_MENU = TTF_OpenFont("font//dlxfont_.ttf",60);
+        if (g_font_MENU == NULL)
+        {
+            success=false;
+        }
        if(Mix_OpenAudio(22050,MIX_DEFAULT_FORMAT,2,4096)==-1) success=false;
        g_sound_bk = Mix_LoadWAV("music//bk.wav");
        g_sound_exp = Mix_LoadWAV("music//exp.wav");
@@ -90,6 +96,7 @@ void close()
 std::vector<TheatsObject*> Theats_List()
 {
     std::vector<TheatsObject*> list_theats;
+
 
     TheatsObject* theats_move = new TheatsObject[4];
 
@@ -149,7 +156,16 @@ int main(int argc,char* argv[]){
     if(LoadBackground()==false){
         return -1;
     }
+    bool is_quit=false;
+    Mix_PlayChannel(-1,g_sound_bk,0);
 
+    int ret_menu = SDLCommonFunc::ShowMenu(g_screen, g_font_MENU, "Play Game", "Exit", "img//menu.png");
+    if (ret_menu == 1)
+        is_quit = true;
+
+play_again:
+    Mix_FreeChunk(g_sound_bk);
+    g_sound_bk=NULL;
     GameMap game_map;
     game_map.LoadMap("map/map.dat");
     game_map.LoadTiles(g_screen);
@@ -182,10 +198,10 @@ int main(int argc,char* argv[]){
     money_game.set_color(GameText::White_Text);
 
     Mix_PlayChannel(-1,g_sound_play,0);
-    bool is_quit=false;
     while(!is_quit)
     {
         fps_time.start();
+        bool game_over=false;
         while(SDL_PollEvent(&g_event)!=0)
         {
             if(g_event.type==SDL_QUIT)
@@ -263,11 +279,7 @@ int main(int argc,char* argv[]){
                    }
                    else
                    {
-
-                       p_theat->Free();
-                       close();
-                       SDL_Quit();
-                       return 0;
+                     game_over=true;
                    }
 
 
@@ -324,7 +336,7 @@ int main(int argc,char* argv[]){
         Uint32 val_time=600-time_val;
         if(val_time<=0)
         {
-
+            game_over=true;
         }
         else
         {
@@ -352,6 +364,55 @@ int main(int argc,char* argv[]){
 
 
         SDL_RenderPresent(g_screen);
+        if(theat_list.size()==0)
+        {
+            Mix_FreeChunk(g_sound_play);
+            g_sound_play=NULL;
+            g_sound_bk = Mix_LoadWAV("music//bk.wav");
+            Mix_PlayChannel(-1,g_sound_bk,0);
+            int ret_win = SDLCommonFunc::ShowMenu(g_screen, g_font_MENU, "Play Again", "Exit","img//win.png");
+            if (ret_win == 1)
+            {
+                is_quit = true;
+                continue;
+            }
+            else
+            {
+                is_quit = false;
+                g_sound_play = Mix_LoadWAV("music//play.wav");
+                goto play_again;
+            }
+        }
+
+        if(game_over)
+        {
+            Mix_FreeChunk(g_sound_play);
+            g_sound_play=NULL;
+            g_sound_bk = Mix_LoadWAV("music//bk.wav");
+            Mix_PlayChannel(-1,g_sound_bk,0);
+            int ret_gover = SDLCommonFunc::ShowMenu(g_screen, g_font_MENU, "Play Again", "Exit","img//gameover.png");
+            if (ret_gover == 1)
+            {
+                is_quit = true;
+                continue;
+            }
+            else
+            {
+                is_quit = false;
+                for(int i=0;i<theat_list.size();i++)
+              {
+                   TheatsObject* p_theat = theat_list.at(i);
+                   if(p_theat!=NULL)
+                  {
+                      p_theat->Free();
+                      p_theat=NULL;
+                  }
+              }
+                theat_list.clear();
+                g_sound_play = Mix_LoadWAV("music//play.wav");
+                goto play_again;
+            }
+        }
 
         int real_imp_time=fps_time.get_tick();
         int time_one_frame=1000/FRAME_PER_SECOND;
