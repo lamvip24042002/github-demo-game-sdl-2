@@ -21,6 +21,7 @@ static Mix_Chunk* g_sound_exp;
 static Mix_Chunk* g_sound_bk;
 static Mix_Chunk* g_sound_comeback;
 static Mix_Chunk* g_sound_play;
+static Mix_Chunk* g_sound_coin;
 
 const int FRAME_PER_SECOND = 30;
 const int SCREEN_WIDTH=1280;

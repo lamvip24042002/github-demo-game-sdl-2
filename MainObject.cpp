@@ -211,7 +211,7 @@ void MainObject::HandelBullet(SDL_Renderer* des,Map& map_data)
     }
 }
 
-void MainObject::DoPlayer(Map& map_data,PlayerPower* p_pow,SDL_Renderer* screen,Mix_Chunk* cb_sound)
+void MainObject::DoPlayer(Map& map_data,PlayerPower* p_pow,SDL_Renderer* screen,Mix_Chunk* cb_sound,Mix_Chunk* coin_sound)
 {
     if(come_back_time==0)
   {
@@ -238,7 +238,7 @@ void MainObject::DoPlayer(Map& map_data,PlayerPower* p_pow,SDL_Renderer* screen,
       }
       input_type_.jump_=0;
     }
-    CheckToMap(map_data, p_pow,screen);
+    CheckToMap(map_data, p_pow,screen,coin_sound);
     CenterEntityOnMap(map_data);
    }
     else
@@ -280,7 +280,7 @@ void MainObject::CenterEntityOnMap(Map& map_data)
 }
 
 
-void MainObject::CheckToMap(Map& map_data,PlayerPower* p_pow,SDL_Renderer* screen)
+void MainObject::CheckToMap(Map& map_data,PlayerPower* p_pow,SDL_Renderer* screen,Mix_Chunk* coin_sound)
 {
     int x1=0;
     int x2=0;
@@ -317,6 +317,7 @@ void MainObject::CheckToMap(Map& map_data,PlayerPower* p_pow,SDL_Renderer* scree
                 map_data.Tile[y1][x2]=0;
                 map_data.Tile[y2][x2]=0;
                 IncreaseCoin();
+                Mix_PlayChannel(-1,coin_sound,0);
             }
             else
             {
@@ -338,6 +339,7 @@ void MainObject::CheckToMap(Map& map_data,PlayerPower* p_pow,SDL_Renderer* scree
                 map_data.Tile[y1][x1]=0;
                 map_data.Tile[y2][x1]=0;
                 IncreaseCoin();
+                Mix_PlayChannel(-1,coin_sound,0);
             }
             else
             {
@@ -370,6 +372,7 @@ void MainObject::CheckToMap(Map& map_data,PlayerPower* p_pow,SDL_Renderer* scree
                 map_data.Tile[y2][x1]=0;
                 map_data.Tile[y2][x2]=0;
                 IncreaseCoin();
+                Mix_PlayChannel(-1,coin_sound,0);
             }
             else
             {
@@ -394,6 +397,7 @@ void MainObject::CheckToMap(Map& map_data,PlayerPower* p_pow,SDL_Renderer* scree
                 map_data.Tile[y1][x1]=0;
                 map_data.Tile[y1][x2]=0;
                 IncreaseCoin();
+                Mix_PlayChannel(-1,coin_sound,0);
         }
         else
         {

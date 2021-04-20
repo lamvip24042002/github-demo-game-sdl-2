@@ -65,7 +65,8 @@ bool InitData()
        g_sound_bullet= Mix_LoadWAV("music//bullet.wav");
        g_sound_comeback = Mix_LoadWAV("music//cb.wav");
        g_sound_play = Mix_LoadWAV("music//play.wav");
-       if(g_sound_bk== NULL|| g_sound_bullet==NULL||g_sound_comeback==NULL||g_sound_exp==NULL||g_sound_play==NULL) success=false;
+       g_sound_coin = Mix_LoadWAV("music//coin.wav");
+       if(g_sound_bk== NULL|| g_sound_bullet==NULL||g_sound_comeback==NULL||g_sound_exp==NULL||g_sound_play==NULL||g_sound_coin==NULL) success=false;
    }
    return success;
 }
@@ -108,7 +109,7 @@ std::vector<TheatsObject*> Theats_List()
             p_theat->LoadImg("img//tl.png",g_screen);
             p_theat->SetClip();
             p_theat->SetTypeMove(TheatsObject::Move_In_Space);
-            p_theat->set_x_pos(700+500*i);
+            p_theat->set_x_pos(500+600*i);
             p_theat->set_y_pos(200);
             p_theat->set_input_left(1);
 
@@ -133,7 +134,7 @@ std::vector<TheatsObject*> Theats_List()
             p_theat->LoadImg("img//threat.png",g_screen);
             p_theat->SetClip();
             p_theat->SetTypeMove(TheatsObject::Static_Threat);
-            p_theat->set_x_pos(900+1200*i);
+            p_theat->set_x_pos(1000+1100*i);
             p_theat->set_y_pos(250);
 
             BulletOpject* p_bullet = new BulletOpject();
@@ -220,7 +221,7 @@ play_again:
 
         player.HandelBullet(g_screen,map_data);
         player.SetMapXY(map_data.start_x,map_data.start_y);
-        player.DoPlayer(map_data,p_pow,g_screen,g_sound_comeback);
+        player.DoPlayer(map_data,p_pow,g_screen,g_sound_comeback,g_sound_coin);
         player.Show(g_screen);
 
         game_map.SetMap(map_data);
@@ -333,7 +334,7 @@ play_again:
 
         std::string str_time ="Time: ";
         Uint32 time_val=SDL_GetTicks()/1000;
-        Uint32 val_time=600-time_val;
+        Uint32 val_time=300-time_val;
         if(val_time<=0)
         {
             game_over=true;

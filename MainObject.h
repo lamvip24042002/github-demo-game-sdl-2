@@ -29,8 +29,8 @@ public:
     void HandelInputActision(SDL_Event events,SDL_Renderer* screen,Mix_Chunk* bullet_sound);
     void SetClip();
 
-    void DoPlayer(Map& map_data,PlayerPower* p_pow,SDL_Renderer* screen,Mix_Chunk* cb_sound);
-    void CheckToMap(Map& map_data,PlayerPower* p_pow,SDL_Renderer* screen);
+    void DoPlayer(Map& map_data,PlayerPower* p_pow,SDL_Renderer* screen,Mix_Chunk* cb_sound,Mix_Chunk* coin_sound);
+    void CheckToMap(Map& map_data,PlayerPower* p_pow,SDL_Renderer* screen,Mix_Chunk* coin_sound);
 
     void SetMapXY(const int map_x,const int map_y){map_x_=map_x;map_y_=map_y;}
     void CenterEntityOnMap(Map& map_data);
