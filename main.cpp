@@ -163,8 +163,18 @@ int main(int argc,char* argv[]){
     int ret_menu = SDLCommonFunc::ShowMenu(g_screen, g_font_MENU, "Play Game", "Exit", "img//menu.png");
     if (ret_menu == 1)
         is_quit = true;
-
+    int time_mode;
 play_again:
+    int ret_mode = SDLCommonFunc::ShowMenu(g_screen, g_font_MENU, "Easy", "Hard","img//gamemode.png");
+    if(ret_mode==1)
+    {
+        time_mode=25;
+    }
+    else
+    {
+        time_mode=100;
+    }
+    Uint32 timepass = SDL_GetTicks()/1000;
     Mix_FreeChunk(g_sound_bk);
     g_sound_bk=NULL;
     GameMap game_map;
@@ -334,7 +344,7 @@ play_again:
 
         std::string str_time ="Time: ";
         Uint32 time_val=SDL_GetTicks()/1000;
-        Uint32 val_time=300-time_val;
+        Uint32 val_time = time_mode-time_val+timepass;
         if(val_time<=0)
         {
             game_over=true;

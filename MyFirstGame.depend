@@ -1,8 +1,8 @@
 # depslib dependency file v1.0
-1615533184 source:c:\users\lamvi\desktop\myfirstgame\commonfunc.cpp
+1618961543 source:c:\users\lamvi\desktop\myfirstgame\commonfunc.cpp
 	"CommonFunc.h"
 
-1615907393 c:\users\lamvi\desktop\myfirstgame\commonfunc.h
+1618959874 c:\users\lamvi\desktop\myfirstgame\commonfunc.h
 	<string>
 	<vector>
 	<windows.h>
@@ -10,8 +10,10 @@
 	<SDL_image.h>
 	<SDL_mixer.h>
 	<SDL_ttf.h>
+	"GameText.h"
+	"BaseObject.h"
 
-1615891920 source:c:\users\lamvi\desktop\myfirstgame\main.cpp
+1618965124 source:c:\users\lamvi\desktop\myfirstgame\main.cpp
 	"CommonFunc.h"
 	"BaseObject.h"
 	"game_map.h"
@@ -37,14 +39,14 @@
 	"CommonFunc.h"
 	"BaseObject.h"
 
-1615907396 c:\users\lamvi\desktop\myfirstgame\mainobject.h
+1618959874 c:\users\lamvi\desktop\myfirstgame\mainobject.h
 	<vector>
 	"CommonFunc.h"
 	"BaseObject.h"
 	"BulletObject.h"
 	"PlayerPower.h"
 
-1615956891 source:c:\users\lamvi\desktop\myfirstgame\mainobject.cpp
+1618959874 source:c:\users\lamvi\desktop\myfirstgame\mainobject.cpp
 	"MainObject.h"
 
 1615344410 source:c:\users\lamvi\desktop\myfirstgame\imptimer.cpp
@@ -60,21 +62,21 @@
 	"CommonFunc.h"
 	"BaseObject.h"
 
-1615713528 source:c:\users\lamvi\desktop\myfirstgame\bulletobject.cpp
+1616489720 source:c:\users\lamvi\desktop\myfirstgame\bulletobject.cpp
 	"BulletObject.h"
 
-1615891898 c:\users\lamvi\desktop\myfirstgame\bulletobject.h
+1616311748 c:\users\lamvi\desktop\myfirstgame\bulletobject.h
 	"CommonFunc.h"
 	"BaseObject.h"
 
-1615621845 source:c:\users\lamvi\desktop\myfirstgame\theatsobject.cpp
+1617763804 source:c:\users\lamvi\desktop\myfirstgame\theatsobject.cpp
 	"ThreatsObject.h"
 
 1615453673 c:\users\lamvi\desktop\myfirstgame\theatsobject.h
 	"BaseObject.h"
 	"CommonFunc.h"
 
-1615621845 c:\users\lamvi\desktop\myfirstgame\threatsobject.h
+1617763663 c:\users\lamvi\desktop\myfirstgame\threatsobject.h
 	"BaseObject.h"
 	"CommonFunc.h"
 	"BulletObject.h"
@@ -95,7 +97,7 @@
 1615716281 source:c:\users\lamvi\desktop\myfirstgame\playerpower.cpp
 	"PlayerPower.h"
 
-1615556707 c:\users\lamvi\desktop\myfirstgame\playerpower.h
+1616486184 c:\users\lamvi\desktop\myfirstgame\playerpower.h
 	"CommonFunc.h"
 	"BaseObject.h"
 
