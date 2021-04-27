@@ -262,6 +262,7 @@ void TheatsObject::InitBullet(BulletOpject* p_bullet,SDL_Renderer* screen)
             p_bullet->set_bullet_dir(BulletOpject::Dir_Left);
             p_bullet->SetRect(x_pos+10,y_pos+15);
             p_bullet->set_x_val(15);
+
         }
 
        bullet_list.push_back(p_bullet);

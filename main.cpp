@@ -208,6 +208,9 @@ play_again:
     GameText money_game;
     money_game.set_color(GameText::White_Text);
 
+    GameText threat_game;
+    threat_game.set_color(GameText::White_Text);
+
     Mix_PlayChannel(-1,g_sound_play,0);
     while(!is_quit)
     {
@@ -321,8 +324,8 @@ play_again:
                         {
                             if(obj_theat->GetTypeMove()==TheatsObject::Move_In_Space)
                             {
-                                mark_val+=200;
-                            }else mark_val+=100;
+                                mark_val+=100;
+                            }else mark_val+=200;
                             for(int ex=0;ex<Num_Frame_EXP;ex++)
                             {
                                 int x_pos = p_bullet->GetRect().x-exp_frame_width*0.5;
@@ -372,6 +375,14 @@ play_again:
             money_game.SetText(strcoin);
             money_game.LoadFromRenderText(font_time,g_screen);
             money_game.RenderText(g_screen,SCREEN_WIDTH*0.5-250,25);
+
+            int num_threat = theat_list.size();
+            std::string val_num_threat_str =std::to_string(num_threat);
+            std::string strnumThreat="Enemy: ";
+            strnumThreat+=val_num_threat_str;
+            threat_game.SetText(strnumThreat);
+            threat_game.LoadFromRenderText(font_time,g_screen);
+            threat_game.RenderText(g_screen,SCREEN_WIDTH*0.5+200,25);
 
 
         SDL_RenderPresent(g_screen);

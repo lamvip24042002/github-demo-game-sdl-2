@@ -15,11 +15,10 @@ public:
     TheatsObject();
     ~TheatsObject();
 
-    enum TypeMove
+    enum TypeThreat
     {
         Static_Threat=0,
         Move_In_Space=1,
-        Move_And_Hit=2,
     };
     void set_x_val(const float& xVal) {x_val=xVal;}
     void set_y_val(const float& yVal) {y_val=yVal;}

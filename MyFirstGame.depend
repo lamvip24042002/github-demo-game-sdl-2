@@ -13,7 +13,7 @@
 	"GameText.h"
 	"BaseObject.h"
 
-1618965124 source:c:\users\lamvi\desktop\myfirstgame\main.cpp
+1619493076 source:c:\users\lamvi\desktop\myfirstgame\main.cpp
 	"CommonFunc.h"
 	"BaseObject.h"
 	"game_map.h"
@@ -49,11 +49,11 @@
 1618959874 source:c:\users\lamvi\desktop\myfirstgame\mainobject.cpp
 	"MainObject.h"
 
-1615344410 source:c:\users\lamvi\desktop\myfirstgame\imptimer.cpp
+1619492375 source:c:\users\lamvi\desktop\myfirstgame\imptimer.cpp
 	"impTimer.h"
 	"CommonFunc.h"
 
-1615344388 c:\users\lamvi\desktop\myfirstgame\imptimer.h
+1619492375 c:\users\lamvi\desktop\myfirstgame\imptimer.h
 
 1615385889 source:c:\users\lamvi\desktop\myfirstgame\bulletopject.cpp
 	"BulletOpject.h"
@@ -69,14 +69,14 @@
 	"CommonFunc.h"
 	"BaseObject.h"
 
-1617763804 source:c:\users\lamvi\desktop\myfirstgame\theatsobject.cpp
+1619489105 source:c:\users\lamvi\desktop\myfirstgame\theatsobject.cpp
 	"ThreatsObject.h"
 
 1615453673 c:\users\lamvi\desktop\myfirstgame\theatsobject.h
 	"BaseObject.h"
 	"CommonFunc.h"
 
-1617763663 c:\users\lamvi\desktop\myfirstgame\threatsobject.h
+1619492541 c:\users\lamvi\desktop\myfirstgame\threatsobject.h
 	"BaseObject.h"
 	"CommonFunc.h"
 	"BulletObject.h"
