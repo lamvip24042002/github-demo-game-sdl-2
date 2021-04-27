@@ -94,14 +94,14 @@ void close()
     IMG_Quit();
     SDL_Quit();
 }
-std::vector<TheatsObject*> Theats_List()
+std::vector<TheatsObject*> Theats_List(int a,int b)
 {
     std::vector<TheatsObject*> list_theats;
 
 
-    TheatsObject* theats_move = new TheatsObject[4];
+    TheatsObject* theats_move = new TheatsObject[a];
 
-    for(int i=0;i<4;i++)
+    for(int i=0;i<a;i++)
     {
         TheatsObject* p_theat = (theats_move+i);
         if(p_theat!=NULL)
@@ -124,9 +124,9 @@ std::vector<TheatsObject*> Theats_List()
     }
 
 
-    TheatsObject* theats_obj = new TheatsObject[4];
+    TheatsObject* theats_obj = new TheatsObject[b];
 
-    for(int i=0;i<4;i++)
+    for(int i=0;i<b;i++)
     {
         TheatsObject* p_theat = (theats_obj+i);
         if(p_theat!=NULL)
@@ -164,15 +164,20 @@ int main(int argc,char* argv[]){
     if (ret_menu == 1)
         is_quit = true;
     int time_mode;
+    int a=0,b=0;
 play_again:
     int ret_mode = SDLCommonFunc::ShowMenu(g_screen, g_font_MENU, "Easy", "Hard","img//gamemode.png");
     if(ret_mode==1)
     {
-        time_mode=25;
+        time_mode=30;
+        a=5;
+        b=5;
     }
     else
     {
         time_mode=100;
+        b=4;
+        a=4;
     }
     Uint32 timepass = SDL_GetTicks()/1000;
     Mix_FreeChunk(g_sound_bk);
@@ -190,7 +195,7 @@ play_again:
     player_pow.Init(g_screen);
     PlayerPower* p_pow = &player_pow;
 
-    std::vector<TheatsObject*> theat_list = Theats_List();
+    std::vector<TheatsObject*> theat_list = Theats_List(a,b);
 
     ExplosionObject exp_threat;
     bool exp_ret=exp_threat.LoadImg("img//exp3.png",g_screen);
@@ -210,6 +215,7 @@ play_again:
 
     GameText threat_game;
     threat_game.set_color(GameText::White_Text);
+
 
     Mix_PlayChannel(-1,g_sound_play,0);
     while(!is_quit)
@@ -324,8 +330,8 @@ play_again:
                         {
                             if(obj_theat->GetTypeMove()==TheatsObject::Move_In_Space)
                             {
-                                mark_val+=100;
-                            }else mark_val+=200;
+                                mark_val+=200;
+                            }else mark_val+=100;
                             for(int ex=0;ex<Num_Frame_EXP;ex++)
                             {
                                 int x_pos = p_bullet->GetRect().x-exp_frame_width*0.5;
@@ -376,7 +382,7 @@ play_again:
             money_game.LoadFromRenderText(font_time,g_screen);
             money_game.RenderText(g_screen,SCREEN_WIDTH*0.5-250,25);
 
-            int num_threat = theat_list.size();
+             int num_threat = theat_list.size();
             std::string val_num_threat_str =std::to_string(num_threat);
             std::string strnumThreat="Enemy: ";
             strnumThreat+=val_num_threat_str;
